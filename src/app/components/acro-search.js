@@ -49,7 +49,7 @@ function AcroSearch() {
     const formatResult = (item) => {
         return (
             <>
-                <span style={{ display: 'block', textAlign: 'left' }}>{item.name}</span>
+                <span style={{ display: 'block', textAlign: 'left', fontWeight: '700' }}>{item.name.toUpperCase()}</span>
                 <span style={{ display: 'block', textAlign: 'left' }}>{item.val}</span>
             </>
         )
