@@ -13,9 +13,12 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.description}>
         <div className={styles.searchblock}>
-          <h2>{title.title}</h2>
-          <p>{title.subtitle}</p>
-          <p>{title.about}</p>
+          <div className={styles.shead}>
+            <h2>{title.title}</h2>
+            <p>{title.subtitle}</p>
+          </div>
+
+          {/*<p>{title.about}</p>*/}
           <AcroSearch />
         </div>
 

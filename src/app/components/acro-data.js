@@ -1,9 +1,7 @@
 export const ACR_TITLE = {
-    title: "Marketplace Acronyms",
-    subtitle: "PI Planning acronyms found in planning materials",
-    about: "The intent of this page is to provide a full terms of the acronyms used in PI Planning presentation materials\n" +
-        "Updates can be made directly to this page. For help with questions, additions, or corrections to this page please notify the MSI SAFe team via email <e_ms\n" +
-        "i_safe@bah.com>, notify the team in CMS Slack channel #hcgov-pi-helpme, or leave a comment below."
+    title: "Marketplace Acronyms Search",
+    subtitle: "Predictive Search. Start typing the abbreviation you are looking for",
+    about: "This is a search of the acronyms used in PI Planning presentation materials. Start typing abbreviation you are looking for"
 }
 
 export const ACR_ARR = [
