@@ -1,28 +1,30 @@
 import {ReactSearchAutocomplete} from "react-search-autocomplete";
+import {ACR_ARR} from "@/app/components/acro-data";
 
 function AcroSearch() {
-    const items = [
-        {
-            id: 0,
-            name: 'Cobol'
-        },
-        {
-            id: 1,
-            name: 'JavaScript'
-        },
-        {
-            id: 2,
-            name: 'Basic'
-        },
-        {
-            id: 3,
-            name: 'PHP'
-        },
-        {
-            id: 4,
-            name: 'Java'
-        }
-    ]
+    const items = ACR_ARR;
+    // const items = [
+    //     {
+    //         id: 0,
+    //         name: 'Cobol'
+    //     },
+    //     {
+    //         id: 1,
+    //         name: 'JavaScript'
+    //     },
+    //     {
+    //         id: 2,
+    //         name: 'Basic'
+    //     },
+    //     {
+    //         id: 3,
+    //         name: 'PHP'
+    //     },
+    //     {
+    //         id: 4,
+    //         name: 'Java'
+    //     }
+    // ]
 
     const handleOnSearch = (string, results) => {
         // onSearch will have as the first callback parameter
@@ -47,8 +49,8 @@ function AcroSearch() {
     const formatResult = (item) => {
         return (
             <>
-                <span style={{ display: 'block', textAlign: 'left' }}>id: {item.id}</span>
-                <span style={{ display: 'block', textAlign: 'left' }}>name: {item.name}</span>
+                <span style={{ display: 'block', textAlign: 'left' }}>{item.name}</span>
+                <span style={{ display: 'block', textAlign: 'left' }}>{item.val}</span>
             </>
         )
     }
@@ -65,6 +67,9 @@ function AcroSearch() {
                         onFocus={handleOnFocus}
                         autoFocus
                         formatResult={formatResult}
+                            fuseOptions={{ keys: ["name"] }}
+                            // necessary, otherwise the results will be blank
+                            resultStringKeyName="name"
                     />
                 </div>
             </header>
