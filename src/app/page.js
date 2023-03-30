@@ -3,13 +3,21 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from './page.module.css'
 import AcroSearch from "@/app/components/acro-search";
+import {ACR_TITLE} from "@/app/components/acro-data";
 
 const inter = Inter({ subsets: ['latin'] })
+const title = ACR_TITLE;
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
+        <div>
+          <h2>{title.title}</h2>
+          <p>{title.subtitle}</p>
+          <p>{title.about}</p>
+        </div>
+
         {/*<p>*/}
         {/*  Get started by editing&nbsp;*/}
         {/*  <code className={styles.code}>src/app/page.js</code>*/}
