@@ -20,8 +20,7 @@ export default function Home() {
           </div>
 
           {/*<p>{title.about}</p>*/}
-          <MatSearch />
-          {/*<AcroSearch />*/}
+          <AcroSearch />
         </div>
 
         {/*<p>*/}

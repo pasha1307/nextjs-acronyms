@@ -373,7 +373,7 @@ function MatSearch() {
             autoHighlight
             getOptionLabel={(option) => option.label}
             renderOption={(props, option) => (
-                <Box component="li" key={option.id}>
+                <Box component="li" key={option.id} {...props}>
                     {option.label} - {option.val}
                 </Box>
             )}
@@ -383,7 +383,7 @@ function MatSearch() {
                     label="Select Abbreviation"
                     inputProps={{
                         ...params.inputProps,
-                        autoComplete: 'new-password', // disable autocomplete and autofill
+                        autoComplete: 'foo', // disable autocomplete and autofill
                     }}
                 />
             )}
