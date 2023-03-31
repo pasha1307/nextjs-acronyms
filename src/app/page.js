@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import styles from './page.module.css'
 import AcroSearch from "@/app/components/acro-search";
 import {ACR_TITLE} from "@/app/components/acro-data";
+import MatSearch from "@/app/components/mat-search";
 
 const inter = Inter({ subsets: ['latin'] })
 const title = ACR_TITLE;
@@ -19,7 +20,8 @@ export default function Home() {
           </div>
 
           {/*<p>{title.about}</p>*/}
-          <AcroSearch />
+          <MatSearch />
+          {/*<AcroSearch />*/}
         </div>
 
         {/*<p>*/}

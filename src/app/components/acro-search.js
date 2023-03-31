@@ -2,6 +2,7 @@ import {ReactSearchAutocomplete} from "react-search-autocomplete";
 import {ACR_ARR} from "@/app/components/acro-data";
 
 function AcroSearch() {
+    const koo = 1;
     const items = ACR_ARR;
     // const items = [
     //     {
@@ -27,9 +28,10 @@ function AcroSearch() {
     // ]
 
     const handleOnSearch = (string, results) => {
+        return results.filter(el => el.name === string)
         // onSearch will have as the first callback parameter
         // the string searched and for the second the results.
-        console.log(string, results)
+        // console.log(string, results)
     }
 
     const handleOnHover = (result) => {
@@ -67,9 +69,9 @@ function AcroSearch() {
                         onFocus={handleOnFocus}
                         autoFocus
                         formatResult={formatResult}
-                            fuseOptions={{ keys: ["name"] }}
+                            fuseOptions={{ keys: ["id"] }}
                             // necessary, otherwise the results will be blank
-                            resultStringKeyName="name"
+                            resultStringKeyName="id"
                     />
                 </div>
             </header>
