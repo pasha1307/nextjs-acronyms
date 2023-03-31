@@ -306,7 +306,7 @@ function AcroSearch() {
                         formatResult={formatResult}
                             fuseOptions={{ keys: ["label"], minMatchCharLength: 1, threshold: 0 }}
                             // necessary, otherwise the results will be blank
-                            resultStringKeyName="id"
+                            resultStringKeyName="val"
 
                     />
                 </div>
