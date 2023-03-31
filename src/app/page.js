@@ -15,8 +15,21 @@ export default function Home() {
       <div className={styles.description}>
         <div className={styles.searchblock}>
           <div className={styles.shead}>
-            <h2>{title.title}</h2>
-            <p>{title.subtitle}</p>
+              <div className={styles.center}>
+                  <Image
+                      className={styles.logo}
+                      src="/next.svg"
+                      alt="Next.js Logo"
+                      width={180}
+                      height={37}
+                      priority
+                  />
+                  <div className={styles.thirteen}>
+                      <Image src="/thirteen.svg" alt="AHE2" width={59} height={27} priority />
+                  </div>
+              </div>
+            {/*<h1 className={inter.className}>{title.title}</h1>*/}
+              <p>{title.subtitle}</p>
           </div>
 
           {/*<p>{title.about}</p>*/}
@@ -47,19 +60,19 @@ export default function Home() {
         {/*</div>*/}
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="AHE2" width={59} height={27} priority />
-        </div>
-      </div>
+      {/*<div className={styles.center}>*/}
+      {/*  <Image*/}
+      {/*    className={styles.logo}*/}
+      {/*    src="/next.svg"*/}
+      {/*    alt="Next.js Logo"*/}
+      {/*    width={180}*/}
+      {/*    height={37}*/}
+      {/*    priority*/}
+      {/*  />*/}
+      {/*  <div className={styles.thirteen}>*/}
+      {/*    <Image src="/thirteen.svg" alt="AHE2" width={59} height={27} priority />*/}
+      {/*  </div>*/}
+      {/*</div>*/}
 
       {/*<div className={styles.grid}>*/}
       {/*  <a*/}
