@@ -33,7 +33,10 @@ export default function Home() {
           </div>
 
           {/*<p>{title.about}</p>*/}
-          <AcroSearch />
+            <div className={styles.searchinput}>
+                <AcroSearch  />
+            </div >
+
         </div>
 
         {/*<p>*/}
