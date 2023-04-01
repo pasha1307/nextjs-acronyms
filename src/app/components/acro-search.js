@@ -1,5 +1,4 @@
 import {ReactSearchAutocomplete} from "react-search-autocomplete";
-import {ACR_ARR} from "@/app/components/acro-data";
 import {useState} from "react";
 import styles from './acro-search.module.css';
 
@@ -17,6 +16,7 @@ function AcroSearch({items}) {
         // onSearch will have as the first callback parameter
         // the string searched and for the second the results.
         console.log('STRING-ITEM', string, 'RESULTS-ARR', results);
+        console.log('hello');
     }
 
     const handleOnHover = (result) => {
@@ -44,8 +44,8 @@ function AcroSearch({items}) {
     const formatResult = (item) => {
         return (
             <>
-                <span style={{ display: 'block', textAlign: 'left', fontWeight: '700' }}>{item.name.toUpperCase()}</span>
-                <span style={{ display: 'block', textAlign: 'left' }}>{item.val}</span>
+                <span style={{display: 'block', textAlign: 'left', fontWeight: '700'}}>{item.name.toUpperCase()}</span>
+                <span style={{display: 'block', textAlign: 'left'}}>{item.val}</span>
             </>
         )
     }
@@ -56,7 +56,7 @@ function AcroSearch({items}) {
     return (
         <div className="App">
             <header className="App-header">
-                <div style={{ width: 400 }}>
+                <div style={{width: 400}}>
                     <ReactSearchAutocomplete
                         items={items}
                         onSearch={handleOnSearch}
@@ -65,9 +65,9 @@ function AcroSearch({items}) {
                         onFocus={handleOnFocus}
                         autoFocus
                         formatResult={formatResult}
-                            fuseOptions={{ keys: ["name"], minMatchCharLength: 1, threshold: 0 }}
-                            // necessary, otherwise the results will be blank
-                            resultStringKeyName="val"
+                        fuseOptions={{keys: ["name"], minMatchCharLength: 1, threshold: 0}}
+                        // necessary, otherwise the results will be blank
+                        resultStringKeyName="val"
 
                     />
                 </div>
@@ -84,4 +84,5 @@ function AcroSearch({items}) {
     )
 
 }
+
 export default AcroSearch;
