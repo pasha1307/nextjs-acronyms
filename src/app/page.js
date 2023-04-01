@@ -3,11 +3,12 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from './page.module.css'
 import AcroSearch from "@/app/components/acro-search";
-import {ACR_TITLE} from "@/app/components/acro-data";
+import {ACR_ARR, ACR_TITLE} from "@/app/components/acro-data";
 import MatSearch from "@/app/components/mat-search";
 
 const inter = Inter({ subsets: ['latin'] })
 const title = ACR_TITLE;
+const items = ACR_ARR;
 
 export default function Home() {
   return (
@@ -34,7 +35,7 @@ export default function Home() {
 
           {/*<p>{title.about}</p>*/}
             <div className={styles.searchinput}>
-                <AcroSearch  />
+                <AcroSearch items={items} />
             </div >
 
         </div>

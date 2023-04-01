@@ -3,8 +3,8 @@ import {ACR_ARR} from "@/app/components/acro-data";
 import {useState} from "react";
 import styles from './acro-search.module.css';
 
-function AcroSearch() {
-    const items = ACR_ARR;
+function AcroSearch({items}) {
+    // const items = ACR_ARR;
     const [arr, setArr] = useState([]);
 
     // function addItem(item) {
@@ -76,7 +76,7 @@ function AcroSearch() {
                 {arr.map(el => {
                     return <div key={el.id} className={styles.itemsel}>
                         <h2>{el.name}: </h2>
-                        <spanb>{el.val}</spanb>
+                        <span>{el.val}</span>
                     </div>
                 })}
             </div>
