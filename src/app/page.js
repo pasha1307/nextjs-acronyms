@@ -4,12 +4,30 @@ import {Inter} from 'next/font/google'
 import styles from './page.module.css'
 import AcroSearch from "@/app/components/acro-search";
 import {ACR_ARR, ACR_TITLE} from "@/app/components/acro-data";
+import {useState} from "react";
+import {Chip, Paper, Stack, styled} from "@mui/material";
 
 const inter = Inter({subsets: ['latin']})
 const title = ACR_TITLE;
 const items = ACR_ARR;
+const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : 'rgba(255,255,255,.8)',
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'left',
+    color: theme.palette.text.secondary,
+}));
+
 
 export default function Home() {
+    const [arr, setArr] = useState([]);
+    const hs = (item) => {
+        // the item selected
+        const newItem = {id: item.id, name: item.name, val: item.val};
+        setArr([...arr, newItem]);
+        // console.log([...arr])
+        console.log(item)
+    }
     return (
         <main className={styles.main}>
             <div className={styles.description}>
@@ -31,7 +49,19 @@ export default function Home() {
                         <p>{title.subtitle}</p>
                     </div>
                     <div className={styles.searchinput}>
-                        <AcroSearch items={items}/>
+                        <AcroSearch items={items} handleOnSelect={hs}/>
+                    </div>
+                    <div className={styles.stack}>
+                        <Stack spacing={2}>
+                            {arr.map(el => {
+                                return <Item key={el.id}><Chip variant="outlined" color="primary" label={el.name} /> - {el.val}</Item>
+                                // <div key={el.id} className={styles.itemsel}>
+                                //     <h2>{el.name}: </h2>
+                                //     <span>{el.val}</span>
+                                // </div>
+                            })}
+                        </Stack>
+
                     </div>
                 </div>
 

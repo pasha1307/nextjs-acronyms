@@ -2,7 +2,7 @@ import {ReactSearchAutocomplete} from "react-search-autocomplete";
 import {useState} from "react";
 import styles from './acro-search.module.css';
 
-function AcroSearch({items}) {
+function AcroSearch({items, handleOnSelect}) {
     // const items = ACR_ARR;
     const [arr, setArr] = useState([]);
 
@@ -29,7 +29,7 @@ function AcroSearch({items}) {
         // console.log('RESULT', result)
     }
 
-    const handleOnSelect = (item) => {
+    const handleOnSelect1 = (item) => {
         // the item selected
         const newItem = {id: item.id, name: item.name, val: item.val};
         setArr([...arr, newItem]);
@@ -72,14 +72,7 @@ function AcroSearch({items}) {
                     />
                 </div>
             </header>
-            <div>
-                {arr.map(el => {
-                    return <div key={el.id} className={styles.itemsel}>
-                        <h2>{el.name}: </h2>
-                        <span>{el.val}</span>
-                    </div>
-                })}
-            </div>
+           
         </div>
     )
 
