@@ -237,6 +237,6 @@ export const ACR_ARR = [
     {id: 227, name: "WETGDWO", val: "Web and Emerging Technologies Group, Division of Website Ops"},
     {id: 228, name: "WL", val: "Work List"},
     {id: 229, name: "XOC", val: "Exchange Operations Center"},
-    {id: 230, name: "ONE", val: "CMS Opportunity to Network and Engage"},
+    {id: 230, name: "ZONE", val: "CMS Opportunity to Network and Engage"},
 ]
 
