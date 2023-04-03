@@ -5,7 +5,7 @@ import styles from './page.module.css'
 import AcroSearch from "@/app/components/acro-search";
 import {ACR_ARR, ACR_TITLE} from "@/app/components/acro-data";
 import {useState} from "react";
-import {Chip, Paper, Stack, styled} from "@mui/material";
+import {Chip, dividerClasses, ListItem, Paper, Stack, styled} from "@mui/material";
 
 const inter = Inter({subsets: ['latin']})
 const title = ACR_TITLE;
@@ -28,6 +28,9 @@ export default function Home() {
         // console.log([...arr])
         console.log(item)
     }
+    const handleDelete = (chipToDelete) => () => {
+        setArr((chips) => chips.filter((chip) => chip.id !== chipToDelete.id));
+    };
     return (
         <main className={styles.main}>
             <div className={styles.description}>
@@ -54,7 +57,12 @@ export default function Home() {
                     <div className={styles.stack}>
                         <Stack spacing={2}>
                             {arr.map(el => {
-                                return <Item key={el.id}><Chip variant="outlined" color="primary" label={el.name} /> - {el.val}</Item>
+                                return <ListItem key={el.id}>
+                                    <Chip variant="outlined" color="primary" label={el.name} />
+                                    <Chip color="info" label={el.val} onDelete={el.label === el.val ? undefined : handleDelete(el)} />
+                                </ListItem>
+
+
                                 // <div key={el.id} className={styles.itemsel}>
                                 //     <h2>{el.name}: </h2>
                                 //     <span>{el.val}</span>
