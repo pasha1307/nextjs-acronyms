@@ -33,8 +33,10 @@ export default function Home() {
     };
     return (
         <main className={styles.main}>
-            <div className={styles.description}>
-                <div className={styles.searchblock}>
+            {/*<div className={styles.description}>*/}
+            <div >
+                {/*<div className={styles.searchblock}>*/}
+                <div >
                     <div className={styles.shead}>
                         <div className={styles.center}>
                             <Image
@@ -49,7 +51,7 @@ export default function Home() {
                                 <Image src="/thirteen.svg" alt="AHE2" width={59} height={27} priority/>
                             </div>
                         </div>
-                        <p>{title.subtitle}</p>
+                        <p className={styles.txt}>{title.subtitle}</p>
                     </div>
                     <div className={styles.searchinput}>
                         <AcroSearch items={items} handleOnSelect={hs}/>
@@ -111,47 +113,47 @@ export default function Home() {
             {/*  </div>*/}
             {/*</div>*/}
 
-            {/*<div className={styles.grid}>*/}
-            {/*  <a*/}
-            {/*    href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"*/}
-            {/*    className={styles.card}*/}
-            {/*    target="_blank"*/}
-            {/*    rel="noopener noreferrer"*/}
-            {/*  >*/}
-            {/*    <h2 className={inter.className}>*/}
-            {/*      Docs <span>-&gt;</span>*/}
-            {/*    </h2>*/}
-            {/*    <p className={inter.className}>*/}
-            {/*      Find in-depth information about Next.js features and API.*/}
-            {/*    </p>*/}
-            {/*  </a>*/}
+            <div className={styles.grid}>
+                {/*<a*/}
+                {/*  href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"*/}
+                {/*  className={styles.card}*/}
+                {/*  target="_blank"*/}
+                {/*  rel="noopener noreferrer"*/}
+                {/*>*/}
+                {/*  <h2 className={inter.className}>*/}
+                {/*    Docs <span>-&gt;</span>*/}
+                {/*  </h2>*/}
+                {/*  <p className={inter.className}>*/}
+                {/*    Find in-depth information about Next.js features and API.*/}
+                {/*  </p>*/}
+                {/*</a>*/}
 
-            {/*  <a*/}
-            {/*    href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"*/}
-            {/*    className={styles.card}*/}
-            {/*    target="_blank"*/}
-            {/*    rel="noopener noreferrer"*/}
-            {/*  >*/}
-            {/*    <h2 className={inter.className}>*/}
-            {/*      Templates <span>-&gt;</span>*/}
-            {/*    </h2>*/}
-            {/*    <p className={inter.className}>Explore the Next.js 13 playground.</p>*/}
-            {/*  </a>*/}
+                {/*<a*/}
+                {/*  href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"*/}
+                {/*  className={styles.card}*/}
+                {/*  target="_blank"*/}
+                {/*  rel="noopener noreferrer"*/}
+                {/*>*/}
+                {/*  <h2 className={inter.className}>*/}
+                {/*    Templates <span>-&gt;</span>*/}
+                {/*  </h2>*/}
+                {/*  <p className={inter.className}>Explore the Next.js 13 playground.</p>*/}
+                {/*</a>*/}
 
-            {/*  <a*/}
-            {/*    href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"*/}
-            {/*    className={styles.card}*/}
-            {/*    target="_blank"*/}
-            {/*    rel="noopener noreferrer"*/}
-            {/*  >*/}
-            {/*    <h2 className={inter.className}>*/}
-            {/*      Deploy <span>-&gt;</span>*/}
-            {/*    </h2>*/}
-            {/*    <p className={inter.className}>*/}
-            {/*      Instantly deploy your Next.js site to a shareable URL with Vercel.*/}
-            {/*    </p>*/}
-            {/*  </a>*/}
-            {/*</div>*/}
+                {/*<a*/}
+                {/*  href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"*/}
+                {/*  className={styles.card}*/}
+                {/*  target="_blank"*/}
+                {/*  rel="noopener noreferrer"*/}
+                {/*>*/}
+                {/*  <h2 className={inter.className}>*/}
+                {/*    Deploy <span>-&gt;</span>*/}
+                {/*  </h2>*/}
+                {/*  <p className={inter.className}>*/}
+                {/*    Instantly deploy your Next.js site to a shareable URL with Vercel.*/}
+                {/*  </p>*/}
+                {/*</a>*/}
+            </div>
         </main>
     )
 }
